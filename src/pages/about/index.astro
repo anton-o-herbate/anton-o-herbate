@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getAboutData } from "../../api/about";
+const data = await getAboutData(fetch);
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <h1>{data.title}</h1>
+	<div>{data.description}</div>
+  </main>
+</Layout>
+
+<style></style>
